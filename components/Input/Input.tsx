@@ -15,6 +15,7 @@ const StyledInput = styled.input`
 
   color: ${theme.color.dark};
   font-size: 16px;
+  text-align: center;
 
   background: ${theme.color.white};
   box-shadow: none;
