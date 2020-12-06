@@ -1,0 +1,23 @@
+import React, { ReactElement } from 'react';
+import styled from 'styled-components';
+import theme from '../../constants/theme';
+
+const Wrapper = styled.footer`
+  text-align: center;
+
+  a {
+    color: ${theme.color.yellow};
+  }
+`;
+
+const Footer = (): ReactElement => {
+  return (
+    <Wrapper>
+      <p>
+        by <a href="https://lpenafiel.com">Lucho</a> with ♥️
+      </p>
+    </Wrapper>
+  );
+};
+
+export default Footer;
