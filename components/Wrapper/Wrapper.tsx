@@ -9,8 +9,7 @@ const Main = styled.div`
 
   min-height: calc(100vh - 60px - 18px - 44px);
 
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 16px; ;
 `;
 
 type WrapperType = {

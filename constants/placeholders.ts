@@ -1,0 +1,18 @@
+export default [
+  'Woody',
+  'Buzz',
+  'Jessie',
+  'Sr. Cara de Papa',
+  'Slinky',
+  'Rex',
+  'Tiro al blanco',
+  'Sra. Cara de Papa',
+  'Hamm',
+  'Forky',
+  'Betty',
+  'Duke',
+  'Lotso',
+  'Zurg',
+  'Wheezy',
+  'Lenny',
+];
