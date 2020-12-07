@@ -70,7 +70,7 @@ const Points = (): ReactElement => {
           <Card color={theme.color.blue} text="+2" onClick={() => addValuCard(20)} />
           <Card color={theme.color.red} especial="R" onClick={() => addValuCard(20)} />
           <Card color={theme.color.yellow} especial="B" onClick={() => addValuCard(20)} />
-          <Card color={theme.color.dark} especial="+4" onClick={() => addValuCard(20)} />
+          <Card color={theme.color.dark} especial="+4" onClick={() => addValuCard(50)} />
           <Card color={theme.color.dark} especial="*" onClick={() => addValuCard(50)} />
         </CardGrid>
 

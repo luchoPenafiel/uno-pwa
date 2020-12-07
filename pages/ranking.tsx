@@ -13,7 +13,7 @@ const Target = (): ReactElement => {
       const isWin = players.find((player) => player.points >= Number(target));
 
       if (isWin) {
-        alert(`Ganó ${JSON.stringify(isWin)}`);
+        alert(`!${isWin.name} ganó el juego!`);
       }
 
       players.sort(function (a, b) {

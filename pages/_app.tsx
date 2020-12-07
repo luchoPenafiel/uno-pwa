@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Head>
+        <title>UNO</title>
         <meta
           name="viewport"
           content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"

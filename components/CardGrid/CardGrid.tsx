@@ -9,6 +9,8 @@ const Wrapper = styled.div`
   justify-content: center;
 
   width: 100%;
+
+  margin-bottom: 75px;
 `;
 
 type CardGridType = {

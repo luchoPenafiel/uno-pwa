@@ -5,9 +5,9 @@ import theme from '../../constants/theme';
 const StyledButton = styled.button`
   display: block;
 
-  width: 100%;
-
   padding: 12px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 8px;
 
   font-size: ${({ variant }) => (variant === 'primary' ? '22px' : '16px')};
