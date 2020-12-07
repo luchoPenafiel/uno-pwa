@@ -18,6 +18,10 @@ const Points = (): ReactElement => {
     // setCardsAdded([...cardsAdded, value]);
   };
 
+  const resetCount = () => {
+    setTotalPoints(0);
+  };
+
   const finishCount = () => {
     const data = [
       ...otherPlayers,
@@ -76,6 +80,9 @@ const Points = (): ReactElement => {
 
         <Button text="Listo" onClick={finishCount} />
 
+        <br />
+        <Button text="Resetear cuenta" onClick={resetCount} variant="secondary" />
+
         {/* <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)' }}>
           {cardsAdded.length
             ? cardsAdded.map((value) => {
@@ -84,7 +91,6 @@ const Points = (): ReactElement => {
             : null}
         </div> */}
       </Wrapper>
-      <Footer />
     </Container>
   );
 };
