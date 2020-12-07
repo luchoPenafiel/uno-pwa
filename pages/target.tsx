@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import Router from 'next/router';
 import { useForm } from 'react-hook-form';
-import { Button, Container, Footer, Header, Input, Title, Wrapper } from '../components';
+import { Button, Container, Header, Input, Title, Wrapper } from '../components';
 
 const Target = (): ReactElement => {
   const { register, handleSubmit } = useForm();
@@ -28,8 +28,6 @@ const Target = (): ReactElement => {
           <Button type="submit" text="Siguiente" />
         </form>
       </Wrapper>
-
-      <Footer />
     </Container>
   );
 };

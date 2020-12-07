@@ -7,7 +7,7 @@ const Main = styled.div`
   justify-content: ${({ justify }): string => (justify ? justify : 'center')};
   align-items: ${({ aling }): string => (aling ? aling : 'center')};
 
-  min-height: calc(100vh - 60px - 18px - 44px);
+  /* min-height: calc(100vh - 60px - 18px - 44px); */
 
   padding: 32px 16px; ;
 `;

@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import Router from 'next/router';
 import { useForm } from 'react-hook-form';
-import { Button, Container, Footer, Header, Input, Title, Wrapper } from '../components';
+import { Button, Container, Header, Input, Title, Wrapper } from '../components';
 import placeholder from '../constants/placeholders';
 
 const Players = (): ReactElement => {
@@ -66,7 +66,6 @@ const Players = (): ReactElement => {
           <Button type="submit" text="Siguiente" />
         </form>
       </Wrapper>
-      <Footer />
     </Container>
   );
 };

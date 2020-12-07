@@ -1,5 +1,5 @@
 import React, { ReactElement, useEffect, useState } from 'react';
-import { Container, Footer, Header, Modal, Player, Title, Wrapper } from '../components';
+import { Container, Header, Modal, Player, Title, Wrapper } from '../components';
 
 const Target = (): ReactElement => {
   const [positions, setPositions] = useState<any>([]);
@@ -58,8 +58,6 @@ const Target = (): ReactElement => {
             })
           )}
         </Wrapper>
-
-        <Footer />
       </Container>
       {showModal && (
         <Modal onClose={closeModal}>

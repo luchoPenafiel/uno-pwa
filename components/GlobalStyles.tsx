@@ -18,6 +18,10 @@ export const GlobalStyle = createGlobalStyle`
     } 
   }
 
+  body {
+    background-color: #000;
+  }
+
   a {
     text-decoration: none;
   }
