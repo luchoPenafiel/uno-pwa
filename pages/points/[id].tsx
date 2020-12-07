@@ -1,11 +1,13 @@
 import React, { ReactElement, useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Card, Container, Footer, Header, Wrapper } from '../../components';
+import Router, { useRouter } from 'next/router';
+import { Button, Card, CardGrid, Container, Footer, Header, Points as PointsDisplay, Wrapper } from '../../components';
 import theme from '../../constants/theme';
 
 const Points = (): ReactElement => {
   const [otherPlayers, setOtherPlayers] = useState(undefined);
   const [selectedPlayer, setSelectedPlayer] = useState(undefined);
+  // const [cardsAdded, setCardsAdded] = useState([]);
+
   const [totalPoints, setTotalPoints] = useState(0);
   const [status, setStatus] = useState('loadingInitialData');
   const router = useRouter();
@@ -13,6 +15,22 @@ const Points = (): ReactElement => {
 
   const addValuCard = (value) => {
     setTotalPoints(totalPoints + value);
+    // setCardsAdded([...cardsAdded, value]);
+  };
+
+  const finishCount = () => {
+    const data = [
+      ...otherPlayers,
+      { id: selectedPlayer.id, name: selectedPlayer.name, points: selectedPlayer.points + totalPoints },
+    ];
+
+    try {
+      window.localStorage.setItem('players', JSON.stringify(data));
+
+      Router.push('/ranking');
+    } catch {
+      alert('No hay espacio en tu dispositivo');
+    }
   };
 
   useEffect(() => {
@@ -35,13 +53,9 @@ const Points = (): ReactElement => {
       <Wrapper justify="flex-start">
         {status === 'loadingInitialData' ? <p>Cargando puntos...</p> : null}
 
-        <p>{totalPoints}</p>
+        <PointsDisplay value={totalPoints} />
 
-        <br />
-        <br />
-        <br />
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridGap: '12px', width: '100%' }}>
+        <CardGrid>
           <Card color={theme.color.blue} text="0" />
           <Card color={theme.color.green} text="1" onClick={() => addValuCard(1)} />
           <Card color={theme.color.red} text="2" onClick={() => addValuCard(2)} />
@@ -54,11 +68,21 @@ const Points = (): ReactElement => {
           <Card color={theme.color.green} text="9" onClick={() => addValuCard(9)} />
 
           <Card color={theme.color.blue} text="+2" onClick={() => addValuCard(20)} />
-          <Card color={theme.color.green} text="+4" onClick={() => addValuCard(20)} />
-          <Card color={theme.color.red} text="R" onClick={() => addValuCard(20)} />
-          <Card color={theme.color.yellow} text="B" onClick={() => addValuCard(20)} />
-          <Card color={theme.color.blue} text="*" onClick={() => addValuCard(50)} />
-        </div>
+          <Card color={theme.color.red} especial="R" onClick={() => addValuCard(20)} />
+          <Card color={theme.color.yellow} especial="B" onClick={() => addValuCard(20)} />
+          <Card color={theme.color.dark} especial="+4" onClick={() => addValuCard(20)} />
+          <Card color={theme.color.dark} especial="*" onClick={() => addValuCard(50)} />
+        </CardGrid>
+
+        <Button text="Listo" onClick={finishCount} />
+
+        {/* <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)' }}>
+          {cardsAdded.length
+            ? cardsAdded.map((value) => {
+                return <Card scale={0.5} color={theme.color.green} text={value} />;
+              })
+            : null}
+        </div> */}
       </Wrapper>
       <Footer />
     </Container>

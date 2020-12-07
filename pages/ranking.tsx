@@ -8,6 +8,13 @@ const Target = (): ReactElement => {
   useEffect(() => {
     try {
       const players = JSON.parse(window.localStorage.getItem('players'));
+      const target = JSON.parse(window.localStorage.getItem('target'));
+
+      const isWin = players.find((player) => player.points >= Number(target));
+
+      if (isWin) {
+        alert(`Ganó ${JSON.stringify(isWin)}`);
+      }
 
       players.sort(function (a, b) {
         if (a.points < b.points) {
