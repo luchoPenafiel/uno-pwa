@@ -16,6 +16,8 @@ const Wrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 
   overflow-y: scroll;
+
+  z-index: 10;
 `;
 
 const Body = styled.div`

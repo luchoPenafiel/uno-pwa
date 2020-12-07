@@ -2,8 +2,6 @@ import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  min-height: 100vh;
-
   padding: 22px 16px;
 
   background-color: ${({ theme }) => theme.color.dark};
