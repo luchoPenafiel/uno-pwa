@@ -28,6 +28,12 @@ const Players = (): ReactElement => {
       }
     }
 
+    if (players.length < 2) {
+      alert('Debes agregar al menos dos jugadores');
+
+      return;
+    }
+
     try {
       window.localStorage.setItem('players', JSON.stringify(players));
 

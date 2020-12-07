@@ -35,7 +35,7 @@ const Header = (): ReactElement => {
           </a>
         </NextLink>
         <div>
-          <Button text="Reflamento" variant="secondary" onClick={openModal} />
+          <Button text="Reglamento" variant="secondary" onClick={openModal} />
         </div>
       </Nav>
       {showModal && (

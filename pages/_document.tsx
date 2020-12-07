@@ -46,10 +46,17 @@ class MyDocument extends NextDocument {
           <link rel="apple-touch-icon" sizes="180x180" href={`${BASE_URL}/favicon/apple-touch-icon.png`} />
           <link rel="icon" type="image/png" sizes="32x32" href={`${BASE_URL}/favicon/favicon-32x32.png`} />
           <link rel="icon" type="image/png" sizes="16x16" href={`${BASE_URL}/favicon/favicon-16x16.png`} />
-          <link rel="manifest" href={`${BASE_URL}/favicon/site.webmanifest`} />
+          <link rel="manifest" href={`${BASE_URL}/webmanifest.json`} />
           <link rel="mask-icon" href={`${BASE_URL}/favicon/safari-pinned-tab.svg`} color="#000" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
+
+          <meta name="mobile-web-app-capable" content="yes" />
+
+          <meta name="apple-mobile-web-app-title" content="Vetapp" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+
+          <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
           <link
             href={`${BASE_URL}/splashscreens/iphone5_splash.png`}

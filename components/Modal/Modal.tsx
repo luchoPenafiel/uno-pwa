@@ -59,7 +59,12 @@ const Button = styled.button`
   }
 `;
 
-const Modal = ({ children, onClose }: any): ReactElement => {
+type ModalTypes = {
+  children: ReactElement | ReactElement[];
+  onClose: () => void;
+};
+
+const Modal = ({ children, onClose }: ModalTypes): ReactElement => {
   return (
     <Wrapper>
       <Button onClick={onClose}>
