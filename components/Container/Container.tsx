@@ -5,14 +5,6 @@ const Wrapper = styled.div`
   padding: 22px 16px;
 
   background-color: ${({ theme }) => theme.color.dark};
-
-  transform: translateY(-42px);
-`;
-
-const EsterEgg = styled.p`
-  text-align: center;
-
-  margin-bottom: 12px;
 `;
 
 type ContainerTypes = {
@@ -21,10 +13,9 @@ type ContainerTypes = {
 
 const Container = ({ children }: ContainerTypes): ReactElement => {
   return (
-    <Wrapper>
-      <EsterEgg>by Lucho with ♥️</EsterEgg>
-      {children}
-    </Wrapper>
+    <>
+      <Wrapper>{children}</Wrapper>
+    </>
   );
 };
 

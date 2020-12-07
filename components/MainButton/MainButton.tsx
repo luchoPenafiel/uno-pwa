@@ -11,6 +11,7 @@ const SlyledLink = styled.a`
 
   padding: 5px;
   margin-bottom: 75px;
+  margin-top: 50px;
 
   background: #000;
   background: linear-gradient(

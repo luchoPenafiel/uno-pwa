@@ -1,6 +1,6 @@
 import React, { ReactElement, useEffect, useState } from 'react';
 import NextLink from 'next/link';
-import { Container, Header, MainButton, Wrapper } from '../components';
+import { Container, Footer, Header, MainButton, Wrapper } from '../components';
 
 const Home = (): ReactElement => {
   const [oldGame, setOldGame] = useState(false);
@@ -30,6 +30,7 @@ const Home = (): ReactElement => {
           </NextLink>
         ) : null}
       </Wrapper>
+      <Footer />
     </Container>
   );
 };
