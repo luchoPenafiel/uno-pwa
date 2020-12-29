@@ -17,6 +17,8 @@ const StyledButton = styled.button`
   appearance: none;
   box-shadow: none;
   border: ${({ variant }) => (variant === 'primary' ? `1px solid ${theme.color.yellow}` : 'none')};
+
+  cursor: pointer;
 `;
 
 type ButtonTypes = {

@@ -7,6 +7,12 @@ const Target = (): ReactElement => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async ({ target }) => {
+    if (target <= 0) {
+      alert('Debes elegir un número mayor a 0.');
+
+      return;
+    }
+
     try {
       window.localStorage.setItem('target', JSON.stringify(target));
 

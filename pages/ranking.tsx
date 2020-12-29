@@ -60,8 +60,8 @@ const Target = (): ReactElement => {
         </Wrapper>
       </Container>
       {showModal && (
-        <Modal onClose={closeModal}>
-          <Title text={`!${playerWin} ganó el juego!`} />
+        <Modal onClose={closeModal} aling="center">
+          <Title text={`¡Felicitaciones ${playerWin}, ganaste el juego!`} />
         </Modal>
       )}
     </>

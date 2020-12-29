@@ -13,17 +13,22 @@ const Wrapper = styled.div`
 
   padding: 20px;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
 
   overflow-y: scroll;
 
   z-index: 10;
+
+  ${({ aling }) => (aling === 'center' ? 'display: flex; align-items: center;' : null)};
 `;
 
 const Body = styled.div`
   background-color: ${theme.color.white};
 
   width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
 
   h1,
@@ -46,13 +51,20 @@ const Body = styled.div`
 const Button = styled.button`
   position: absolute;
 
+  display: flex;
+
+  padding: 5px;
+  border-radius: 50%;
+
   top: 26px;
   right: 26px;
 
-  background: none;
+  background: #fff;
   appearance: none;
   border: none;
   box-shadow: none;
+
+  cursor: pointer;
 
   svg {
     path {
@@ -64,11 +76,12 @@ const Button = styled.button`
 type ModalTypes = {
   children: ReactElement | ReactElement[];
   onClose: () => void;
+  aling?: string;
 };
 
-const Modal = ({ children, onClose }: ModalTypes): ReactElement => {
+const Modal = ({ children, onClose, aling }: ModalTypes): ReactElement => {
   return (
-    <Wrapper>
+    <Wrapper aling={aling}>
       <Button onClick={onClose}>
         <ImCancelCircle color="#000" fontSize={22} />
       </Button>

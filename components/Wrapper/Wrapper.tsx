@@ -9,6 +9,10 @@ const Main = styled.div`
 
   /* min-height: calc(100vh - 60px - 18px - 44px); */
 
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
   padding: 32px 16px; ;
 `;
 
