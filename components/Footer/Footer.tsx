@@ -16,7 +16,7 @@ const Footer = (): ReactElement => {
   return (
     <Wrapper>
       <p>
-        by <a href="https://lpenafiel.com">Lucho</a> with ♥️
+        by <a href="https://lucho.codes">Lucho</a> with ♥️
       </p>
     </Wrapper>
   );
