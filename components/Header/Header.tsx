@@ -143,7 +143,7 @@ const Header = (): ReactElement => {
             </li>
           </ul>
 
-          <Title text="Penas" />
+          <Title text="Puntos" />
           <p>
             El jugador que ha puesto todas sus cartas primeramente, recibe los siguientes puntos por las cartas de sus
             jugadores que tienen todavía en la mano:
