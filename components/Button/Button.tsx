@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 import theme from '../../constants/theme';
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<{ variant: string }>`
   display: block;
 
   padding: 12px;
@@ -24,7 +24,7 @@ const StyledButton = styled.button`
 type ButtonTypes = {
   variant?: 'primary' | 'secondary';
   text: string;
-  type?: string;
+  type?: 'button' | 'submit' | 'reset';
   onClick?: (data?) => void;
   disabled?: boolean;
 };
@@ -35,7 +35,7 @@ const Button = ({ variant, text, type, onClick, disabled }: ButtonTypes): ReactE
   };
 
   return (
-    <StyledButton variant={variant || 'primary'} type={type || 'text'} onClick={handleClic} disabled={disabled}>
+    <StyledButton variant={variant || 'primary'} type={type || 'button'} onClick={handleClic} disabled={disabled}>
       {text}
     </StyledButton>
   );

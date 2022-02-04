@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '../../constants/theme';
 import { ImCancelCircle } from 'react-icons/im';
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ aling: string }>`
   position: fixed;
   top: 0;
   left: 0;

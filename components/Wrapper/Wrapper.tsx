@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 
-const Main = styled.div`
+const Main = styled.div<{ justify: string; aling: string }>`
   display: flex;
   flex-direction: column;
   justify-content: ${({ justify }): string => (justify ? justify : 'center')};

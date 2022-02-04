@@ -5,7 +5,7 @@ import theme from '../../constants/theme';
 import { CgArrowsExchangeAltV } from 'react-icons/cg';
 import { MdBlock } from 'react-icons/md';
 
-const Wrapper = styled.button`
+const Wrapper = styled.button<{ scale: number }>`
   display: block;
   position: relative;
 
@@ -58,7 +58,7 @@ const Wrapper = styled.button`
   }
 `;
 
-const Value = styled.span`
+const Value = styled.span<{ value: string }>`
   &::before {
     content: '${({ value }) => value}';
 
